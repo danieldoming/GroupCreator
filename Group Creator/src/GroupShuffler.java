@@ -32,19 +32,57 @@ public class GroupShuffler
 
 	private static void groupAmount()
 		{
-			int groups = 22/numberOfGroups;
-			int leftOvers = 22 % numberOfGroups;
+			int smallGroupSize = classroom.size()/numberOfGroups;
+			int numberOfBigGroups = classroom.size() % numberOfGroups;
 			
-			System.out.println(groups + " and " + leftOvers);
+			System.out.println(smallGroupSize + " and " + numberOfBigGroups);
 			
-			System.out.println("You will have " + leftOvers + " of " + (groups + 1) + " and " + (numberOfGroups - leftOvers) + " of " + groups);
+			System.out.println("You will have " + numberOfBigGroups + " of " + (smallGroupSize + 1) + " and " + (numberOfGroups - numberOfBigGroups) + " of " + smallGroupSize);
+			System.out.println(" ");
 			
+			int bigGroupSize = smallGroupSize + 1;
+			int numberOfSmallGroups = numberOfGroups - numberOfBigGroups;
+			int counter= 0;
+			int groupLabel = 1;
 			
-			
-			for(int i = 0; i < leftOvers; i++)
+			for(int a = 0; a < numberOfBigGroups ; a++)
 				{
+					System.out.println("Group " + (groupLabel));
 					
+					for(int i = 0; i < bigGroupSize ; i++ )
+						{
+							
+							System.out.println(classroom.get(counter).getName());
+							counter++;
+							
+							
+						}
+					System.out.println(" ");
+					
+					groupLabel++;
+							
+							
 				}
+			
+			for(int a = 0; a < numberOfSmallGroups ; a++)
+				{
+					System.out.println("Group " + (groupLabel));
+					
+					for(int i = 0; i < smallGroupSize; i++ )
+						{
+							
+							System.out.println(classroom.get(counter).getName());
+							counter++;
+							
+							
+						}
+					System.out.println(" ");
+					
+					
+							
+					groupLabel++;	
+				}
+		}
 			
 			
 		}
@@ -55,7 +93,7 @@ public class GroupShuffler
 	
 
 
-	}
+	
 
 
 
