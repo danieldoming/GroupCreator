@@ -35,15 +35,21 @@ public class GroupShuffler
 			int smallGroupSize = classroom.size()/numberOfGroups;
 			int numberOfBigGroups = classroom.size() % numberOfGroups;
 			
-			System.out.println(smallGroupSize + " and " + numberOfBigGroups);
+			//System.out.println(smallGroupSize + " and " + numberOfBigGroups);
 			
-			System.out.println("You will have " + numberOfBigGroups + " of " + (smallGroupSize + 1) + " and " + (numberOfGroups - numberOfBigGroups) + " of " + smallGroupSize);
+			System.out.println("You will have " + numberOfBigGroups + " groups of " + (smallGroupSize + 1) + " and " + (numberOfGroups - numberOfBigGroups) + " groups of " + smallGroupSize);
 			System.out.println(" ");
 			
 			int bigGroupSize = smallGroupSize + 1;
 			int numberOfSmallGroups = numberOfGroups - numberOfBigGroups;
 			int counter= 0;
 			int groupLabel = 1;
+			
+			//THIS CREATES THE FIRST GROUP
+			//-----------------------
+			
+			System.out.println("GROUP PROJECT ONE");
+			System.out.println(" ");
 			
 			for(int a = 0; a < numberOfBigGroups ; a++)
 				{
@@ -78,10 +84,37 @@ public class GroupShuffler
 						}
 					System.out.println(" ");
 					
-					
-							
+						
 					groupLabel++;	
 				}
+			groupLabel = 1;
+			counter = 0;
+			
+			
+			//^^^^^^^^^^^^^^^^^^^^^^^^^
+			//THIS CREATES THE FIRST GROUP
+			
+			
+			//THIS CREATES THE SECOND GROUP
+			//--------------------------
+			
+			System.out.println("GROUP PROJECT TWO");
+			System.out.println(" ");
+			
+			for(int a = 0; a < numberOfBigGroups; a++)
+				{
+					System.out.println("Group " + groupLabel);
+					
+					for(int i = 0; i < bigGroupSize ; i++ )
+						{
+							
+						}
+				}
+			
+			
+			
+			
+			
 		}
 			
 			
